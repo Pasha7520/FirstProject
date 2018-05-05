@@ -1,0 +1,66 @@
+import java.util.Scanner;
+
+
+public class main1 {
+
+	public static void main(String[] args) {
+		
+	int a , b ;
+		
+		Scanner scn = new Scanner(System.in); //Створення сканера для зчитування даних з консолі (сам вводиш)
+		
+		
+		System.out.println("Введи а: ");
+		a=scn.nextInt(); //зчитування цілого числа А з клавіатури
+		
+		System.out.println("Введи б: ");
+		b=scn.nextInt(); //зчитування цілого числа Б з клавіатури
+		
+		char c = scn.next().charAt(0);
+		 switch (c){
+		 case '+':
+			 System.out.println("Сума "+(a+b));
+			break;
+		 case '-':
+			 
+			 if((a-b)<0){
+				 System.out.println("Різниця "+(-(a-b)));				 
+			 }else {
+				 System.out.println("Різниця "+ (a-b));
+			 }
+			break;
+		 case '*':
+			 System.out.println("Добуток "+a*b);
+			break;
+		 case '/':
+			 System.out.println("Частка "+a/b);
+			break;
+		 case'%':
+			 System.out.println("Остача "+(a%b));
+		 	break;
+		 case'^':
+			 System.out.println("Піднесення до квадрату :\nA = "+ (a*a)+"\nB = "+ (b*b));
+		 break;
+		 case'&': 
+			 int sum=a;;
+		 if(b>0){
+			 for(int i=1;i<b;i++){
+				 sum=sum*a;
+				
+			 }
+			 
+			 System.out.println("Піднесення до степеня "+ sum);
+			 break;}
+		 else if (b<0){
+			 for(int i=-1;i>b;i--){
+				 sum=sum*a;
+			 }System.out.println("Піднесення до степеня "+ -sum);
+		 }else {
+			 System.out.println("Піднесення до степеня "+ 0);
+		 }
+		 
+		 
+		 }
+	}
+
+}
